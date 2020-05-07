@@ -1,0 +1,20 @@
+;; shadow-cljs configuration
+{:source-paths ["frontend"]
+ :dependencies [[o2w "0.1.16"]
+                [binaryage/devtools "0.9.11"]
+                [cider/cider-nrepl "0.21.0"]]
+ :repositories {"o2w" "https://repo.o2w.es"}
+ :builds
+ {:app
+  {:target     :browser
+   :output-dir "copas/static/js"
+   :asset-path "/static/js"
+   :devtools   {:after-load app.core/mount-root
+                :watch-dir  "awma/static/css"
+                :watch-path "/static/css"
+                :preloads   [devtools.preload]
+                }
+   :compiler-options {:infer-externs true}
+
+   :module-loader true
+   :modules       {:app {:init-fn app.core/init}}}}}

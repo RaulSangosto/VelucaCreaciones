@@ -1,0 +1,295 @@
+@import '_variables';
+@import 'vendors/_bootstrap';
+@import 'vendors/_line-awesome';
+//@import 'pie';
+// @import 'tabs';
+// @import 'search';
+//@import "menu";
+// @import "header";
+@import "_base";
+@import 'vendors/styles';
+
+
+@font-face {
+    font-family: Lintel-Italic;
+    src:    url(../fonts/Lintel-Italic.otf);
+}
+
+@font-face {
+    font-family: Lintel-Regular;
+    src:    url(../fonts/Lintel-Regular.otf);
+}
+
+.body {
+  font-family: 'Lintel-Regular', sans-serif;
+  // color: $text-color;
+  background: white;
+  &.verde {
+    background: $bg-primary;
+    min-height: 100vh;
+  }
+}
+
+a {
+  // color: $text-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+.card {
+  border-radius: $radius;
+  margin: auto;
+  border: 0px;
+  box-shadow: 2px 2px 15px rgba(128,128,128, 0.2);
+}
+
+.text-color {
+  color: $primary;
+}
+
+
+.padding-pie {
+  padding-bottom: 60px;
+}
+
+h1, h2, h3 {
+  &.bold {
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: white;
+  }
+}
+
+
+h2.title {
+  color: white;
+  margin-bottom: 0.8em;
+
+}
+
+.tools {
+  position: absolute;
+  color: white;
+  top: 0px;
+  padding-top: 25px;
+  min-height: 100px;
+  width: 100%;
+  // background: $bg-black-bottom;
+
+  .back {
+    margin-left: 25px;
+  }
+  .search {
+    float: right;
+    margin-right: 25px;
+  }
+  i {
+    font-size: 32px;
+  }
+}
+
+img {
+  max-width: 500px;
+}
+
+.top-round {
+  padding-top: 12px;  background: white;
+  position: absolute;
+  margin-top: -50px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  box-shadow: -2px -2px 15px rgba(0,0,0, 0.2);
+  margin-bottom: 80px;
+  min-height: 600px;
+  max-width: 100% !important;
+}
+
+.row.noticias {
+  .pd-noticia:nth-child(even) {
+    padding-left: 8px;
+  }
+  .pd-noticia:nth-child(odd) {
+    padding-right: 8px;
+  }
+}
+
+.clearfix {
+  margin-top: 160px;
+  border: 1px solid red;
+  clear: both;
+}
+.container{
+  img {
+
+    max-width: 100%;
+  }
+}
+
+.btn-primary {
+  background: $bg-primary;
+  border: 1px solid $primary;
+}
+
+
+.page-item.active .page-link {
+  background: $bg-primary;
+  border: 1px solid $primary;
+}
+
+
+.card-entrevista {
+  &.confirmada {
+    background: $primary;
+  }
+  &.no-confirmada {
+    background: #007bff;
+  }
+  &.anulada {
+    background: #dc3545;
+  }
+
+  color: white;
+  padding: 1em;
+  border-radius: $radius;
+  p {
+    margin: 0;
+  }
+}
+
+
+.pd-3 {
+  padding: 25px;
+}
+.color-negro {
+  color: $texto;
+}
+
+.destacada {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+
+  img {
+    border-radius: $radius;
+  }
+  .fecha {
+    color: $primary;
+    font-size: 11px;
+  }
+  h6 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.1;
+    margin-bottom: 0px;
+  }
+}
+
+.container {
+  overflow-x: auto;
+}
+
+.white {
+  color: white;
+}
+
+.home-logo {
+  width: 60px;
+  margin-left: 20px;
+  margin-top: -5px;
+}
+
+.bg-verde{
+  background-color: #129d39;
+}
+
+.main-txt {
+  position: absolute;
+  text-align: center;
+  top: 30px;
+}
+
+.flotante-txt {
+  position: absolute;
+  top: 110px;
+  width: 40%;
+  margin-left: 5%;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.desactivado {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  background-color: black;
+  opacity: 50%;
+}
+
+.tab-item{
+  .text-icon{
+    display: none;
+  }
+}
+
+.banner-colaboradores {
+  border-radius: 20px;
+  min-height: 50px;
+  background-color: green;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.flex-container{
+  display: flex;
+}
+
+.flex-item{
+  justify-self: flex-start;
+  align-self: center;
+}
+
+@media (min-width: $media-l){
+  .top-round{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 12px;  background: white;
+    position: absolute;
+    margin-top: -50px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: -2px -2px 15px rgba(0,0,0, 0.2);
+    margin-bottom: 80px;
+    min-height: 600px;
+  }
+
+  .tab-item, .active{
+    a{
+      text-decoration: none;
+    }
+    .text-icon{
+      display: inline;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+  }
+
+  .card{
+    max-width: 600px;
+    //margin-top: 100px;
+  }
+
+  .card-margin {
+    margin-top: 100px;
+  }
+
+  .app{
+    height: 100% !important;
+  }
+}

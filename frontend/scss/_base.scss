@@ -1,0 +1,29 @@
+body,
+html,
+#app,
+.body{
+    height: 100%;
+    background-color: red;
+}
+
+.cuerpo {
+    padding-top: 35px;
+}
+.fondo{
+    background-image: url("/static/img/ui/fondo.png") !important;
+    background-repeat: no-repeat;
+}
+
+.lateral_texto {
+    font-size: 11px;
+    max-height: 600px;
+    padding-top: 80px;
+
+    .justificado {
+        text-align: justify;
+    }
+}
+
+.menu {
+    background-color: red; 
+}

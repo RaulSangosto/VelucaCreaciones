@@ -1,0 +1,54 @@
+$negro: #231f20ff;
+$blanco: #ffffffff;
+
+$gris-claro: #a7a5a6ff;
+$gris-intermedio: #7b7979ff;
+$gris-oscuro: #656263ff;
+
+
+
+$bg-color: #40C1AD;
+$bg-verde1: #65C4AF;
+$bg-verde2: #C0F7E8;
+$bg-azul: #242558;
+
+
+
+$media-xl: 1200px;
+$media-l: 900px;
+$media-m: 700px;
+$media-s: 500px;
+
+$radius: 5px;
+
+$bg-primary: #4EB93E;
+$primary: #31AA40;
+$secondary: #93cd4b;
+$texto-gris: #8B8D8D;
+$texto: #404143;
+$danger: #dc3545;
+$tabs: #A7AAA8;
+
+.errorlist li,
+.validation-advice {
+  font-size: 12px;
+  color: $danger;
+  font-weight: 600;
+  margin-top: 5px;
+  text-align: center;
+  &:before {
+    font:normal normal normal 12px/1 LineAwesome;
+    content: "\f122";
+    display: inline-block;
+    line-height: 1;
+    margin-right: 0.5em;
+  }
+}
+
+
+.has-error .form-control,
+.has-error .Select-placeholder
+{
+  border: 1px dashed $danger !important;
+  background: #faebe7!important;
+}
