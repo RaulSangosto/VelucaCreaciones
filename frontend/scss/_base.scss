@@ -1,15 +1,16 @@
 body,
 html,
 #app,
-.body{
+.body {
     height: 100%;
-    background-color: red;
+    margin: auto;
 }
 
 .cuerpo {
     padding-top: 35px;
 }
-.fondo{
+
+.fondo {
     background-image: url("/static/img/ui/fondo.png") !important;
     background-repeat: no-repeat;
 }
@@ -24,6 +25,134 @@ html,
     }
 }
 
+.top-bar {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: 30px;
+    padding-bottom: 30px;
+}
+
+.logo {
+    text-align: center;
+    padding: 16px;
+    color: $magenta;
+    font-weight: bold;
+    display: block;
+}
+
+.full {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.cabecera-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    img {
+        width: 100%;
+        max-width: 10000px;
+    }
+}
+
+.magenta-bg {
+    background-color: $magenta;
+
+    .texto {
+        margin: 20px;
+        margin-top: 40px;
+    }
+}
+
 .menu {
-    background-color: red; 
+    list-style: none;
+    margin: auto;
+    //margin-right: 400px;
+    padding: 0;
+    overflow: hidden;
+
+    .item {
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+
+        a {
+            color: white
+        }
+
+        &.selected {
+            a {
+                color: $magenta;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.submenu {
+    position: absolute;
+    background-color: $magenta;
+    list-style: none;
+    height: 0;
+    display: none;
+
+    .submenu-item {
+        font-size: 14px;
+        color: white;
+        margin: 0;
+        display: block;
+        text-align: start;
+        padding: 10px;
+        text-decoration: none;
+
+        a {
+            color: white !important;
+        }
+    }
+
+}
+
+.desplegable {
+    &:hover{
+        color: blue;
+        .submenu {
+            list-style: none;
+            height: auto;
+            display: block !important;
+        }
+    }
+    
+}
+
+
+
+.title {
+    margin-top: 130px;
+    margin-left: 100px;
+    margin-bottom: 150px;
+
+    .t,
+    .subt {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    .subt {
+        color: $magenta;
+    }
+}
+
+.seccion {
+    margin-left: 80px;
+    .titulo{
+        background-color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }

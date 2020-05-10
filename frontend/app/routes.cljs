@@ -2,14 +2,25 @@
   (:require home.core
             copas.core
             copas.detalle
+            copas.ultimas
+            copas.personalizar.core
+            conocenos.core
             contactar.core))
 
-(def views {:home            #'home.core/page
-            :copas           #'copas.core/page
-            :copas/detalle   #'copas.detalle/page
-            :contactar       #'contactar.core/page})
+(def views {:home                #'home.core/page
+            :conocenos           #'conocenos.core/page
+            :stock               #'copas.core/page
+            :stock/categoria     #'copas.core/page
+            :copas/detalle       #'copas.detalle/page
+            :ultimos-encargos    #'copas.ultimas/page
+            :personaliza-tu-copa #'copas.personalizar.core/page
+            :contactar           #'contactar.core/page})
 (def routes
-  [["/"            :home]
-   ["/copas"       :copas]
-   ["/copas/:pk"  :copas/detalle]
-   ["/contactar"   :contactar]])
+  [["/"                  :home]
+   ["/conocenos"         :conocenos]
+   ["/copas"             :stock]
+   ["/copas/:pk/:slug"   :stock/categoria]
+   ["/copas/:pk"         :copas/detalle]
+   ["/ultimas-copas"     :ultimos-encargos]
+   ["/personalizar-copa" :personaliza-tu-copa]
+   ["/contactar"         :contactar]])

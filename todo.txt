@@ -1,0 +1,33 @@
+### Menú ###
+
+    -Inicio
+        #Personaliza Boton
+
+    -Conócenos
+
+    -Stock
+        -Desplegable Categorias de Copas
+            #Copas -> Copa/Detalle
+                        #Info Copa
+                        #Personalizar Copa (Formulario de Personalización) -5€ por copa
+
+    -Últimos encargos
+
+    -Personaliza tu copa
+        #Ejemplos de otros encargos
+        #Condiciones
+        #Formulario
+        #Info de Envio
+
+    -Contactar
+        #Datos contacto
+        #Formulario?
+
+
+
+### MODELOS ###
+
+-Copas
+-Contacto
+-Cabeceras
+-Categorias?

@@ -25,8 +25,11 @@ urlpatterns = [
     path('', include('copas.urls')),
     url(r'^api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    re_path(".*", views.home, name="home"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(local_settings.MEDIA_URL, document_root=local_settings.MEDIA_ROOT)
+
+urlpatterns += [
+    re_path(".*", views.home, name="home"),
+]

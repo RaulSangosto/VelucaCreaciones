@@ -1,5 +1,6 @@
 (ns app.core
   (:require [reagent.core :as r]
+            [app.db :as db]
             [app.views]
             [o2w.routes]
             [app.routes]))

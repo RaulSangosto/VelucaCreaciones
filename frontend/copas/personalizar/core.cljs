@@ -1,4 +1,4 @@
-(ns copas.core
+(ns copas.personalizar.core
   (:require [ui.widgets.core :as w]
             [reagent.core :as r]
             [app.db :as db]))
@@ -10,6 +10,6 @@
     [:div.title
      [:h1.t (:titulo @db/cabecera)]
      [:h1.subt (:subtitulo @db/cabecera)]]
-[w/seccion {:titulo "Copas en Stock"
+[w/seccion {:titulo "Tu historía es importante para nosotros."
             :c      w/copa
             :data   copas}]])

@@ -7,4 +7,5 @@
   [:div
    [ui.header/default]
    [o2w.routes/current-view]
-   [ui.footer/default]])
+   [ui.footer/default]
+   ])
