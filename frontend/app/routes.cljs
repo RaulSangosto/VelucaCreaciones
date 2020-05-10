@@ -20,7 +20,7 @@
    ["/conocenos"         :conocenos]
    ["/copas"             :stock]
    ["/copas/:pk/:slug"   :stock/categoria]
-   ["/copas/:pk"         :copas/detalle]
+   ["/copa/:pk/:slug"    :copas/detalle]
    ["/ultimas-copas"     :ultimos-encargos]
    ["/personalizar-copa" :personaliza-tu-copa]
    ["/contactar"         :contactar]])

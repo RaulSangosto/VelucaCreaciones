@@ -7,9 +7,9 @@
    [:h1.titulo titulo]
    (doall (map c @data))])
 
-(defn copa [{:keys [id nombre imagen]}]
+(defn copa [{:keys [id nombre slug imagen]}]
   ^{:key id}
   [:div.col-4>div.card
-   [:a {:href (routes/url :albumes/detalle {:pk id})}
+   [:a {:href (routes/url :copas/detalle {:pk id :slug slug})}
     [:img {:src imagen}]
     [:h2 nombre]]])

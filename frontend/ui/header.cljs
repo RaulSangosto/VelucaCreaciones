@@ -10,6 +10,7 @@
 
 (defn get-cabecera [c]
   (when (= (:name @routes/current-route) (keyword (:slug c)))
+    (js/console.log (:name @routes/current-route))
     (reset! db/cabecera c)))
 
 (api/get "cabeceras" {:ok #(reset! cabeceras %)})
@@ -18,6 +19,7 @@
   (r/with-let [_cabecera (r/atom nil)]
    (doall (map get-cabecera @cabeceras))
   (when @db/cabecera
+    (js/console.log (:slug @db/cabecera))
     [:div.cabecera-fondo
      [:div.row.full
       [:div.col-md-9.full

@@ -12,9 +12,9 @@ from rest_framework import routers
 from . import views
 
 router = routers.DefaultRouter(trailing_slash=False)
-router.register('copas', CopaViewSet)
-router.register('cabeceras', CabeceraViewSet)
-router.register('categorias', CategoriaViewSet)
+router.register('copas', CopaViewSet, basename='Copas')
+router.register('cabeceras', CabeceraViewSet, basename='Cabeceras')
+router.register('categorias', CategoriaViewSet, basename='Categorias')
 
 urlpatterns = [
     url(r'^api/v1/', include(router.urls)),
