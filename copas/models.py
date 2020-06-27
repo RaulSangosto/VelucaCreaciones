@@ -16,6 +16,7 @@ class Copa(models.Model):
 class Categoria(models.Model):
     nombre = models.CharField(null=True, blank=True, max_length=100)
     imagen = models.ImageField(null=True, blank=True,upload_to="imagenes/categorias")
+    overlay = models.BooleanField(default=False)
     slug = models.SlugField(max_length=100)
 
     def __str__(self):
@@ -28,6 +29,7 @@ class Cabecera(models.Model):
     subtitulo = models.CharField(null=True, blank=True, max_length=200)
     slug = models.SlugField(max_length=100)
     imagen = models.ImageField(null=True, blank=True,upload_to="imagenes/categorias")
+    overlay = models.BooleanField(default=False)
 
     def __str__(self):
         return self.nombre

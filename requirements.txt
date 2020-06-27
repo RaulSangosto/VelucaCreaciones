@@ -1,0 +1,5 @@
+Django==3.0.6
+djangorestframework==3.11.0
+ipdb==0.13.2
+Pillow==7.1.2
+

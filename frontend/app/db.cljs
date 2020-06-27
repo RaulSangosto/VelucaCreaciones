@@ -4,3 +4,4 @@
 
 (defonce cabecera (r/atom nil))
 (defonce categorias (r/atom nil))
+(defonce copas (r/atom nil))

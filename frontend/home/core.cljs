@@ -4,18 +4,21 @@
             [app.db :as db]
             [ui.widgets.core :as w]))
 
-(defonce copas (r/atom nil))
+(defonce ultimas-copas (r/atom nil))
+(defonce opiniones (r/atom nil))
 
-(api/get "copas" {:ok #(reset! copas %)})
+(api/get "copas/latest" {:ok #(reset! ultimas-copas %)})
 
 (defn page []
   [:<>
-    [:div.title
-     [:h1.t (:titulo @db/cabecera)]
-     [:h1.subt (:subtitulo @db/cabecera)]]
+   [:div.title
+    [:h1.t (:titulo @db/cabecera)]
+    [:h1.subt (:subtitulo @db/cabecera)]]
+   [w/slider @ultimas-copas]
    [w/seccion {:titulo "Nuestros últimos encargos"
              :c      w/copa
-             :data   copas}]
-   [w/seccion {:titulo "Lo que opinan nuestros clientes"
-               :c      w/copa
-               :data   copas}]])
+             :data   ultimas-copas}]
+  ;;  [w/seccion {:titulo "Lo que opinan nuestros clientes"
+  ;;              :c      w/copa
+  ;;              :data   opiniones}]
+   ])

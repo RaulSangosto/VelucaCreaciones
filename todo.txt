@@ -28,6 +28,29 @@
 ### MODELOS ###
 
 -Copas
+    -Foto
+    -Nombre
+    -Descripcion
+    -Precio
+    -Categoria
+
 -Contacto
+    -Nombre
+    -Email
+    -Telefono
+    -Mensaje
+
 -Cabeceras
--Categorias?
+    -Foto
+    -Titulo
+    -Subtitulo
+    -Degradado-fondo
+    -Color Menú
+
+-Categorias
+    -Foto
+    -Nombre
+
+-Color?
+    -Nombre
+    -Color
