@@ -1,0 +1,32 @@
+{
+  "name": "velucacreaciones",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaulSangosto/VelucaCreaciones.git"
+  },
+  "author": "Raúl Sánchez Angosto <raulsangosto@gmail.es>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "sass -s compressed frontend/scss:copas/static/css",
+    "css:watch": "sass --watch frontend/scss:copas/static/css",
+    "compile": "shadow-cljs release app",
+    "release": "npm-run-all --parallel css compile"
+  },
+  "dependencies": {
+    "@brainhubeu/react-carousel": "^1.15.4",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "sass": "^1.26.5",
+    "yarn": "^1.22.4"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.24.0",
+    "shadow-cljs": "^2.8.83"
+  },
+  "keywords": [],
+  "description": ""
+}
