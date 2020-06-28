@@ -13,6 +13,4 @@
     [:div.title
      [:h1.t (:titulo @db/cabecera)]
      [:h1.subt (:subtitulo @db/cabecera)]]
-[w/seccion {:titulo "¿Tienes alguna pregunta?"
-            :c      w/copa
-            :data   copas}]])
+[w/contactar-formulario {:titulo "¿Tienes alguna pregunta?"}]])

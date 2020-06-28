@@ -15,6 +15,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register('copas', CopaViewSet, basename='Copas')
 router.register('cabeceras', CabeceraViewSet, basename='Cabeceras')
 router.register('categorias', CategoriaViewSet, basename='Categorias')
+router.register('contacto', ContactoViewSet, basename='Contacto')
 
 urlpatterns = [
     url(r'^api/v1/', include(router.urls)),
